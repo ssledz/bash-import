@@ -4,8 +4,6 @@ __init() {
     echo -n $(cat -)
   }
 
-
-  echo init: $@
   local path=$1
   local ns=$3
   local url=$BASH_REP/$path
