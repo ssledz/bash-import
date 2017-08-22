@@ -8,6 +8,7 @@ __init() {
   local ns=$3
   local url=$BASH_REP/$path
 
+  root=$(pwd)
   cd $BASH_REP_DIR
   mkdir -p $path
   init_file=$path/__init
@@ -30,4 +31,5 @@ __init() {
             ;;
     esac
   done < <(cat $init_file | sort)
+  cd $root
 }
