@@ -6,7 +6,7 @@ random_str() {
 
 all_functions() {
   local src=$1
-  cat <(cut -d' ' -f3 <(declare -F)) <(cat $src | grep '^[a-zA-Z0-9_]*()' \
+  cat <(cut -d' ' -f3 <(declare -F)) <(cat $src | grep '^[a-zA-Z0-9_λ]*()' \
     | cut -d '(' -f1) | sort | uniq -c | grep -v '1 ' | tr -s ' ' | cut -d' ' -f3
 }
 
